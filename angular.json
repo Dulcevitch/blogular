@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mon-super-blog": {
+    "blogular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -36,7 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mon-super-blog",
+            "outputPath": "dist/blogular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -46,6 +46,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -81,18 +82,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mon-super-blog:build"
+            "browserTarget": "blogular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mon-super-blog:build:production"
+              "browserTarget": "blogular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mon-super-blog:build"
+            "browserTarget": "blogular:build"
           }
         },
         "test": {
@@ -135,11 +136,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mon-super-blog:serve"
+            "devServerTarget": "blogular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mon-super-blog:serve:production"
+              "devServerTarget": "blogular:serve:production"
             }
           }
         },
@@ -155,5 +156,5 @@
       }
     }
   },
-  "defaultProject": "mon-super-blog"
+  "defaultProject": "blogular"
 }
