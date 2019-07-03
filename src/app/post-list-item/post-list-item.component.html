@@ -1,28 +1,29 @@
-<!-- Cet entête est obligatoire sinon à la sauvegarde du fichier les caractères accentués sont mal affichés -->
-<header>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</header>
-
-<li style="width: 100%" [ngClass]="{'list-group-item': true,
+<li [ngClass]="{'list-group-item': true,
                 'list-group-item-success': post.loveIts > 0,
                 'list-group-item-danger': post.loveIts < 0}">
-  <table border="0" width="100%">
+  <table border="0" cols="2" width="100%">
+    <!-- Le titre et la date de crÃ©ation du post -->
     <tr>
-      <td style="font-size: 26px; font-weight: bold; text-align: left;">{{ post.title }}</td>
-      <td style="font-size: 16px; text-align: right">
-        <em>{{ post.createdAt | date: 'MM/dd/y, HH:mm:ss' }}</em>
+      <td class="text-left">
+        <h3>{{ post.title }}</h3>
+      </td>
+      <td class="text-right">
+        <h5><em>{{ post.createdAt | date: 'MM/dd/y, HH:mm:ss' }}</em></h5>
       </td>
     </tr>
+    <!-- Le contenu du post -->
     <tr>
       <td colspan="2">{{ post.content }}</td>
       <td></td>
     </tr>
+    <!-- Les boutons J'aime et J'aime pas et les Ã©vÃ©nements click -->
     <tr>
       <td colspan="2">
-        <button class="btn btn-success" (click)="onLoveIt()">J'aime !</button>
-        <button class="btn btn-danger" style="margin-left: 10px" (click)="onDontLoveIt()">Je n'aime pas</button>
+        <div style="margin-top: 20px">
+          <button class="btn btn-success" (click)="onLoveIt()">J'aime !</button>
+          <button class="btn btn-danger" style="margin-left: 10px" (click)="onDontLoveIt()">J'aime pas</button>
+        </div>
       </td>
     </tr>
   </table>
-
 </li>

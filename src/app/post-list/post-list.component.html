@@ -1,14 +1,8 @@
-<!-- Cet entête est obligatoire sinon à la sauvegarde du fichier les caractères accentués sont mal affichés -->
-<header>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</header>
-
-<div class="container" style="margin-top: 0px">
-  <div class="row">
-    <h3 style="text-align: center;">{{ title }}</h3>
-    <ul class="list-group" style="width: 100%">
-      <!-- Browsing the posts -->
+<div class="container">
+  <ul class="list-group">
+    <!-- Boucle ngFor sur les posts -->
+    <div class="row">
       <app-post-list-item *ngFor="let p of posts" [post]="p"></app-post-list-item>
-    </ul>
-  </div>
+    </div>
+  </ul>
 </div>

@@ -1,12 +1,4 @@
-<!-- Cet entête est obligatoire sinon à la sauvegarde du fichier les caractères accentués sont mal affichés -->
-<header>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</header>
-
-<!--The content below is only a placeholder and can be replaced.-->
-<div id="app-header">
-  <h1>
-    {{ title }}
-  </h1>
+<div class="container">
+<h2>Liste des posts</h2>
+  <app-post-list [posts]="posts"></app-post-list>
 </div>
-<app-post-list [posts]="posts"></app-post-list>

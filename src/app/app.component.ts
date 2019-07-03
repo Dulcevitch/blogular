@@ -11,8 +11,8 @@ export class AppComponent implements OnInit {
 
   posts: any[] = [
     new Post('Premier titre', 'Ici le contenu du premier post.'),
-    new Post('Deuxi\u00e8me titre', 'Ici le contenu du deuxi\u00e8me post.'),
-    new Post('Troisi\u00e8me titre', 'Ici le contenu du troisi\u00e8me post.'),
+    new Post('Deuxième titre', 'Ici le contenu du deuxième post.'),
+    new Post('Troisième titre', 'Ici le contenu du troisième post.'),
   ];
 
   ngOnInit() {
